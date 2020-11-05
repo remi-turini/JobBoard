@@ -1,0 +1,1013 @@
+@charset "UTF-8";
+/* ========== */
+/*   IMPORT   */
+/* ========== */
+/* ============= */
+/*   VARIABLES   */
+/* ============= */
+/* ========== */
+/*   MIXINS   */
+/* ========== */
+/* =========== */
+/*   GENERAL   */
+/* =========== */
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  background-color: #ececec;
+  color: #000c1a;
+}
+
+p, h1, h2, h3, h4, ul, li, a {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:not(#editProfil) {
+  width: auto;
+  height: 3rem;
+  font-size: 18px;
+  padding: 0.75rem 1.5rem;
+  background-color: #1A79DB;
+  color: #fff;
+  border: 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  outline: none;
+}
+button:not(#editProfil):hover {
+  background-color: transparent;
+  color: #1A79DB;
+  border: 2px solid #1A79DB;
+}
+
+form div:not(.divConnect) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+form div:not(.divConnect) label {
+  text-align: center;
+}
+form div:not(.divConnect) input, form div:not(.divConnect) textarea, form div:not(.divConnect) select {
+  width: 27rem;
+  height: 3rem;
+  font-size: 16px;
+  text-align: center;
+  padding: 0 1.5rem;
+  margin: 0.5rem auto 0 auto;
+  text-align: center;
+  border: 2px solid #1A79DB;
+  border-radius: 0.5rem;
+  outline: none;
+}
+form div:not(.divConnect) input::placeholder, form div:not(.divConnect) textarea::placeholder, form div:not(.divConnect) select::placeholder {
+  font-size: 16px;
+  text-align: center;
+  color: #A6DFF2;
+  opacity: 1;
+}
+form div:not(.divConnect) textarea {
+  width: 36rem;
+  height: 12rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  padding: 0.5rem 1.5rem;
+}
+form .msgError {
+  color: #FF414D;
+  margin-bottom: 1.5rem;
+}
+form h2 {
+  text-align: center;
+}
+
+.sectionApply {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(66, 66, 66, 0.5);
+  top: 0;
+  left: 0;
+}
+.sectionApply form {
+  width: 800px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3rem;
+  margin: 5rem auto 10rem auto;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.sectionApply form svg {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-self: flex-end;
+  margin: 0 0 2rem auto;
+  cursor: pointer;
+}
+.sectionApply form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+.sectionApply form div #cv {
+  width: auto;
+  height: auto;
+  padding: 0.5rem 1.5rem;
+  margin: 1rem auto;
+}
+.sectionApply form .msgError {
+  color: #FF414D;
+  margin-bottom: 1.5rem;
+}
+.sectionApply form button {
+  margin: 1rem auto 0 auto;
+}
+
+/* ===================== */
+/*   OFFER DESCRIPTION   */
+/* ===================== */
+.sectionOffer {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+.sectionOffer .jobHeader {
+  display: grid;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: 0;
+  column-gap: 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  background-color: #fff;
+}
+.sectionOffer .jobHeader .jobHeaderImg {
+  grid-column: 1/2;
+  grid-row: 1/4;
+  width: 9.5rem;
+  height: 5rem;
+  display: flex;
+  padding: 0.5rem;
+  border: 2px solid #1A79DB;
+  border-radius: 0.5rem;
+}
+.sectionOffer .jobHeader .jobHeaderImg img {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+.sectionOffer .jobHeader .company {
+  grid-column: 2/4;
+  grid-row: 1/2;
+}
+.sectionOffer .jobHeader .offerName {
+  grid-column: 2/5;
+  grid-row: 2/3;
+}
+.sectionOffer .jobHeader .divIcone {
+  grid-column: 2/6;
+  grid-row: 3/4;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.sectionOffer .jobHeader .divIcone div {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.5rem;
+}
+.sectionOffer .jobHeader .divIcone div img {
+  width: auto;
+  height: 24px;
+  margin-right: 0.5rem;
+}
+.sectionOffer .jobHeader .btn-apply {
+  grid-column: 6/7;
+  grid-row: 1/3;
+  margin: 0 auto;
+}
+.sectionOffer .jobHeader .heartIcone {
+  grid-column: 6/7;
+  grid-row: 3/4;
+  width: 48px;
+  height: 40px;
+  margin: 0 auto;
+  color: #A6DFF2;
+}
+.sectionOffer .jobHeader h2 {
+  margin: 1rem 0;
+  font-size: 22px;
+}
+.sectionOffer .jobHeader p {
+  font-size: 16px;
+}
+.sectionOffer .jobHeader img {
+  width: auto;
+  height: 24px;
+}
+.sectionOffer .jobDescription {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem 2rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+.sectionOffer .jobDescription .learnMore h2 {
+  margin: 1rem 0;
+  font-size: 22px;
+}
+.sectionOffer .jobDescription .learnMore p {
+  margin-bottom: 2rem;
+}
+.sectionOffer .jobDescription .learnMore .btnLearnLess {
+  margin: 2rem auto 0 auto;
+}
+.sectionOffer .jobDescription .btnLearnMore, .sectionOffer .jobDescription .btnLearnLess {
+  text-align: center;
+  margin: 0 auto;
+  color: #1A79DB;
+}
+.sectionOffer .jobDescription .btnLearnMore:hover, .sectionOffer .jobDescription .btnLearnLess:hover {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* =============================================================== */
+/* POP-UP POUR CONFIRMER LA SUPPRESSION D'UNE ANNONCE (côté admin) */
+/*                            yes or no                            */
+/* =============================================================== */
+.wrapperDeleteElement {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  padding: 18rem 1rem;
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  background-color: rgba(66, 66, 66, 0.5);
+}
+.wrapperDeleteElement .deleteConfirm {
+  padding: 3rem;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+.wrapperDeleteElement .deleteConfirm .btnDeleteElement {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.infosList {
+  padding: 2rem 4rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+.infosList li {
+  color: #1A79DB;
+  margin-bottom: 0.5rem;
+}
+.infosList li h2 {
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+.infosList li .ulListInfo {
+  display: flex;
+  align-items: center;
+}
+.infosList li .ulListInfo h3 {
+  margin-right: 2rem;
+}
+.infosList li .ulDescription {
+  align-items: flex-start;
+}
+.infosList li .ulDescription .description {
+  width: 125px;
+}
+.infosList li .infoButton {
+  display: flex;
+}
+
+.divAdmin {
+  padding: 2rem 4rem;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+
+/* ========================= */
+/* Modifer l'annonce (admin) */
+/* ========================= */
+.formAdmin {
+  display: grid;
+  padding: 5rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+}
+.formAdmin .btnReturnPage {
+  grid-column: 3/13;
+  grid-row: 1/2;
+}
+.formAdmin form {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
+  margin: 2rem auto 0rem auto;
+  background-color: #fff;
+  color: #1A79DB;
+  border-radius: 0.5rem;
+}
+.formAdmin form svg {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-self: flex-end;
+  margin: 0 0 2rem auto;
+  cursor: pointer;
+}
+.formAdmin form h2 {
+  margin-bottom: 1.5rem;
+}
+.formAdmin form div input {
+  width: 576px;
+}
+.formAdmin form button {
+  margin: 1rem auto 0 auto;
+}
+
+.sectionOffer .jobHeader .btn-about {
+  margin: 0 auto 0 0;
+  color: #1A79DB;
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.sectionAbout {
+  display: none;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 5;
+  background-color: rgba(66, 66, 66, 0.5);
+  top: 0;
+  left: 0;
+}
+.sectionAbout .divAbout {
+  width: 900px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem;
+  margin: 5rem auto 10rem auto;
+  background-color: #fff;
+  position: relative;
+  border-radius: 0.5rem;
+}
+.sectionAbout .divAbout svg {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-self: flex-end;
+  margin: 0 0 2rem auto;
+  cursor: pointer;
+}
+.sectionAbout .divAbout div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.sectionAbout .divAbout div h3 {
+  margin-bottom: 1rem;
+}
+
+/* ========== */
+/*   HEADER   */
+/* ========== */
+header {
+  background-color: #1A79DB;
+}
+header .navigation {
+  display: grid;
+  padding: 1rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: 40px;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  align-items: center;
+}
+header .navigation .logo {
+  grid-column: 2/4;
+}
+header .navigation .logo img {
+  width: auto;
+  height: 40px;
+}
+header .navigation .divConnected {
+  width: 100%;
+  grid-column: 10/14;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  column-gap: 0;
+}
+header .navigation .divConnected:hover ul {
+  justify-content: center;
+  top: 70px;
+}
+header .navigation .divConnected .btnConnect {
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .navigation .divConnected .btnConnect:hover {
+  height: 260px;
+}
+header .navigation .divConnected .btnConnect div {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+header .navigation .divConnected .btnConnect div svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+header .navigation .divConnected .btnConnect div:hover {
+  background-color: #A6DFF2;
+  border-color: #1A79DB;
+}
+header .navigation .divConnected .btnConnect div:hover svg, header .navigation .divConnected .btnConnect div:hover p {
+  color: #1A79DB;
+}
+header .navigation .divConnected ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 0 1rem 0;
+  margin: 0 4.25rem;
+  background-color: #1A79DB;
+  position: absolute;
+  top: -250px;
+  border-radius: 0 0 0.5rem 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+header .navigation .divConnected ul li {
+  padding: 1rem 2rem;
+  margin: 0 2rem;
+  text-align: center;
+  color: #fff;
+}
+header .navigation .divConnected ul li:not(#lastMenu) {
+  border-bottom: 2px solid #A6DFF2;
+}
+header .navigation .divConnected ul li:hover {
+  padding: 1rem 4rem;
+  margin: 0;
+  background-color: #A6DFF2;
+  color: #1A79DB;
+  border: 0;
+}
+header .navigation .divNotConnected {
+  grid-column: 12/14;
+  display: flex;
+}
+header .navigation .divNotConnected .btnConnect {
+  grid-column: 1/5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .navigation .divNotConnected .btnConnect:hover {
+  height: 260px;
+}
+header .navigation .divNotConnected .btnConnect div {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+header .navigation .divNotConnected .btnConnect div svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+header .navigation .divNotConnected .btnConnect div:hover {
+  background-color: #A6DFF2;
+  border-color: #1A79DB;
+}
+header .navigation .divNotConnected .btnConnect div:hover svg, header .navigation .divNotConnected .btnConnect div:hover p {
+  color: #1A79DB;
+}
+header .navigation p {
+  color: #fff;
+  font-size: 18px;
+}
+header .headerConnection {
+  display: grid;
+  padding: 1rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: 40px;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  background-color: #1A79DB;
+}
+header .headerConnection a {
+  grid-column: 7/9;
+  margin: 0 auto;
+}
+header .headerConnection a img {
+  width: auto;
+  height: 40px;
+}
+
+main {
+  min-height: 900px;
+  max-width: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  display: grid;
+  padding: 3rem;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #1A79DB;
+  color: #fff;
+  /*.linkFooter {
+      display: flex;
+      justify-content: center;
+
+      ul {
+          margin: 0 4rem;
+          text-align: center;
+
+          h3 { margin-bottom: 1rem; }
+          li { margin-bottom: .5rem; }
+      }
+  }
+
+  hr { 
+      width: 59rem;
+      grid-column: 3/13;
+      border: 1px solid white;
+      margin: 4rem auto;
+  }*/
+}
+footer .rightsReserved {
+  font-size: 18px;
+  text-align: center;
+}
+
+/* =========== */
+/*   ACCUEIL   */
+/* =========== */
+#home {
+  display: grid;
+  padding: 6rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: 40rem;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  background-image: url("../../img/img-accueil.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #1A79DB;
+}
+#home #searchHome {
+  height: 24rem;
+  grid-column: 2/14;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+#home #searchHome h1 {
+  font-size: 48px;
+  margin-bottom: 3rem;
+}
+#home #searchHome p {
+  font-size: 18px;
+  margin-bottom: 2.5rem;
+}
+
+.connection {
+  display: grid;
+  padding: 3rem 0 9rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  flex-direction: column;
+  text-align: center;
+}
+.connection .form {
+  grid-column: 5/11;
+  grid-row: 1/2;
+  padding: 2rem 4rem 1.5rem 4rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+.connection .form h2 {
+  font-size: 22px;
+  margin-bottom: 0.5rem;
+}
+.connection .form .memberConnection {
+  font-size: 18px;
+  margin-bottom: 2.5rem;
+}
+.connection .form .memberConnection a {
+  color: #1A79DB;
+}
+.connection .form form .divConnect {
+  display: flex;
+  justify-content: space-between;
+}
+.connection .form form .divConnect a {
+  color: #1A79DB;
+}
+.connection .form form .divConnect .checkboxConnection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.connection .form form .divConnect .checkboxConnection input {
+  width: 22px;
+  height: 22px;
+  margin: 0 0.5rem 0 0;
+  /*border: 1px solid $blue;
+  border-radius: 5px;*/
+}
+
+/* ================= */
+/*   FIND RESEARCH   */
+/* ================= */
+#findSearch {
+  display: grid;
+  padding: 3rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  height: 1100px;
+}
+#findSearch .sectionOffer {
+  grid-column: 3/13;
+  grid-row: 1/2;
+}
+
+.mainProfil {
+  display: grid;
+  padding: 3rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  align-content: flex-start;
+  color: #1A79DB;
+}
+.mainProfil #headProfil, .mainProfil #details, .mainProfil #profilForm {
+  padding: 2rem 4rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+.mainProfil #headProfil {
+  grid-column: 4/12;
+  grid-row: 1/2;
+  max-height: 136px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  color: #000c1a;
+}
+.mainProfil #headProfil svg {
+  width: 72px;
+  height: 72px;
+  margin-right: 2rem;
+}
+.mainProfil #headProfil h2 {
+  font-size: 28px;
+}
+.mainProfil #details {
+  grid-column: 4/12;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: space-between;
+  color: #1A79DB;
+}
+.mainProfil #details h2 {
+  margin-bottom: 1.5rem;
+  font-size: 22px;
+}
+.mainProfil #details ul {
+  display: flex;
+  align-items: center;
+}
+.mainProfil #details ul:not(#lastDetails) {
+  margin-bottom: 1.5rem;
+}
+.mainProfil #details ul li {
+  margin-bottom: 0.5rem;
+}
+.mainProfil #details ul li h3 {
+  font-size: 18px;
+  margin-right: 2rem;
+}
+.mainProfil #details #editProfil {
+  width: auto;
+  height: auto;
+  padding: 0;
+  background-color: transparent;
+  color: #1A79DB;
+  margin-bottom: auto;
+  border: 0;
+  border-radius: none;
+}
+.mainProfil #details #editProfil svg {
+  width: 32px;
+  height: 32px;
+}
+.mainProfil #profilForm {
+  grid-column: 4/12;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainProfil #profilForm h2 {
+  font-size: 22px;
+  margin: 1rem 0 2rem 0;
+}
+.mainProfil #profilForm div {
+  margin-bottom: 1.5rem;
+}
+.mainProfil #profilForm .footerFormProfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainProfil #profilForm .footerFormProfil .msgError {
+  text-align: center;
+  margin-top: 0;
+}
+.mainProfil #profilForm .footerFormProfil .updateAccount {
+  margin: 2rem auto 0 auto;
+}
+.mainProfil #profilForm .footerFormProfil .cancelModify {
+  margin: 1rem auto 0 auto;
+}
+
+.mainAdmin {
+  display: grid;
+  padding: 3rem 0;
+  grid-template-columns: 1fr repeat(12, 68px) 1fr;
+  grid-template-rows: auto auto;
+  grid-auto-rows: 0;
+  column-gap: 32px;
+  /* ============= */
+  /*    GENERAL    */
+  /* ============= */
+  /* ============== */
+  /* ============== */
+  /* ============== */
+  /* TABLE ANNONCES */
+  /* ============== */
+  /* ============== */
+  /* ============== */
+  /* ================== */
+  /* TABLE UTILISATEURS */
+  /* ================== */
+  /* ============== */
+  /* ============== */
+  /* ================ */
+  /* TABLE ENTREPRISE */
+  /* ================ */
+  /* ============== */
+  /* ============== */
+  /* ===================== */
+  /* TABLE JOB APPLICATION */
+  /* ===================== */
+}
+.mainAdmin h1 {
+  margin-bottom: 1rem;
+  font-size: 48px;
+  text-align: center;
+  color: #1A79DB;
+}
+.mainAdmin .smallButton {
+  margin: 2rem 2rem 0 0;
+  background-color: transparent;
+  color: #1A79DB;
+  border: 2px solid #1A79DB;
+}
+.mainAdmin .smallButton:hover {
+  background-color: #1A79DB;
+  color: #fff;
+}
+.mainAdmin .addElement {
+  margin: 2rem auto 1rem auto;
+}
+.mainAdmin .btnTable {
+  grid-column: 2/14;
+  display: flex;
+  justify-content: space-evenly;
+}
+.mainAdmin .btnTable button {
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+}
+.mainAdmin .btnReturn {
+  grid-column: 3/13;
+  grid-row: 1/2;
+  display: flex;
+  margin-bottom: 2rem;
+}
+.mainAdmin .btnReturn p {
+  margin: 0 auto;
+  text-align: center;
+}
+.mainAdmin .sectionOfferAdmin {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  position: relative;
+  z-index: 0;
+}
+.mainAdmin .sectionOfferAdmin .offerFooter {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 1rem 0;
+}
+.mainAdmin .sectionOfferAdmin .offerFooter button {
+  margin: 0;
+}
+.mainAdmin .sectionOfferAdmin .btnJobAdmin {
+  display: flex;
+  justify-content: space-around;
+}
+.mainAdmin .wrapperDeleteConfirm {
+  grid-column: 1/15;
+  grid-row: 2/3;
+}
+.mainAdmin .wrapperNewApply {
+  width: 100%;
+  padding: 5rem 0;
+  background-color: rgba(66, 66, 66, 0.5);
+  position: absolute;
+  top: 0;
+}
+.mainAdmin .wrapperNewApply .newApply {
+  width: 58rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  margin: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  background-color: #fff;
+}
+.mainAdmin .wrapperNewApply .newApply svg {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-self: flex-end;
+  margin: 0 0 2rem auto;
+  cursor: pointer;
+}
+.mainAdmin .wrapperNewApply .newApply form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.mainAdmin .wrapperNewApply .newApply form h1 {
+  color: #1A79DB;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.mainAdmin .wrapperNewApply .newApply form input, .mainAdmin .wrapperNewApply .newApply form select {
+  width: 36rem;
+  color: #A6DFF2;
+}
+.mainAdmin .wrapperNewApply .newApply form h2 {
+  font-size: 22px;
+  text-align: center;
+  color: #1A79DB;
+  margin: 4rem 0 1rem 0;
+}
+.mainAdmin .wrapperNewApply .newApply form button {
+  margin: 3rem auto 1rem auto;
+}
+.mainAdmin .sectionUsersAdmin {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  position: relative;
+  z-index: 0;
+  margin-bottom: 1rem;
+}
+.mainAdmin .sectionCompaniesAdmin {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  margin-bottom: 1rem;
+}
+.mainAdmin .sectionJobAppAdmin {
+  grid-column: 3/13;
+  grid-row: 2/3;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 5px 5px 0 #b3b3b3;
+  margin-bottom: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,50 @@
+
+.sectionOffer .jobHeader .btn-about {
+    margin: 0 auto 0 0;
+    color: $blue;
+    font-weight: 700;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sectionAbout{
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    background-color: $bkg-apply;
+    top: 0;
+    left: 0;
+
+    .divAbout {
+        width: 900px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5rem;
+        margin: 5rem auto 10rem auto;
+        background-color: $white;
+        position: relative;
+        border-radius: $radius-block;
+        
+        svg {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-self: flex-end;
+            margin: 0 0 2rem auto;
+            cursor: pointer;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 3rem;
+
+            h3 { margin-bottom: 1rem; }
+        }
+    }
+}

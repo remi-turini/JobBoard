@@ -1,0 +1,52 @@
+.connection {
+    @include grid(auto auto, 3rem 0 9rem 0);
+    flex-direction: column;
+    text-align: center;
+
+    .form {
+        grid-column: 5/11;
+        grid-row: 1/2;
+        padding: 2rem 4rem 1.5rem 4rem;
+        background-color: $white;
+        border-radius: .5rem;
+
+        h2 {
+            font-size: $ft-size-title2;
+            margin-bottom: .5rem;
+        }
+    
+        .memberConnection {
+            font-size: $ft-size-medium;
+            margin-bottom: 2.5rem;
+    
+            a { color: $blue; }
+        }
+    
+        form {
+            // FORM IN COMPONENTS
+
+            // FOR CONNECTION
+            .divConnect {
+                display: flex;
+                justify-content: space-between;
+
+                a { color: $blue; }
+
+                .checkboxConnection {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+
+                    input {
+                        width: 22px;
+                        height: 22px; 
+                        margin: 0 .5rem 0 0;
+                        /*border: 1px solid $blue;
+                        border-radius: 5px;*/
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,43 @@
+.infosList { // ul
+    padding: 2rem 4rem;
+    margin-bottom: 1rem;
+    background-color: $white;
+    border-radius: $radius-block;
+    box-shadow: $box-shadow-block;
+
+    li {
+        color: $blue;
+        margin-bottom: .5rem;
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: $ft-size-title2;
+        }
+
+        // ul dans un li
+        .ulListInfo {
+            display: flex;
+            align-items: center;
+
+            h3 { margin-right: 2rem; }
+        }
+
+        // ul dans un li (description)
+        .ulDescription {
+            align-items: flex-start; 
+
+            .description { width: 125px; }
+        }
+
+        // ul dans un li (buttons)
+        .infoButton { display: flex;}   
+    }
+}
+
+.divAdmin {
+    padding: 2rem 4rem;
+    margin-bottom: 1rem;
+    background-color: $white;
+    border-radius: $radius-block;
+    box-shadow: $box-shadow-block;
+}

@@ -1,0 +1,46 @@
+/* ========================= */
+/* Modifer l'annonce (admin) */
+/* ========================= */
+
+.formAdmin {
+    @include grid(auto auto, 5rem 0);
+
+    .btnReturnPage {
+        grid-column: 3/13;
+        grid-row: 1/2;
+    }
+
+    form {
+        grid-column: 3/13;
+        grid-row: 2/3;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 4rem;
+        margin: 2rem auto 0rem auto;
+        background-color: $white;
+        color: $blue;
+        border-radius: $radius-block;
+
+        svg {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-self: flex-end;
+            margin: 0 0 2rem auto;
+            cursor: pointer;
+        }
+
+        h2 { margin-bottom: 1.5rem; }
+
+        div { 
+            input { width: 576px; }
+        }
+
+        button { margin: 1rem auto 0 auto; }
+    }
+}
+
+

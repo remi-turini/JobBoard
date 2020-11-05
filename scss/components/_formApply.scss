@@ -1,0 +1,53 @@
+.sectionApply{
+    display: none;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    z-index: 5;
+    background-color: $bkg-apply;
+    top: 0;
+    left: 0;
+
+    form {
+        width: 800px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 3rem;
+        margin: 5rem auto 10rem auto;
+        background-color: $white;
+        position: relative;
+        border-radius: $radius-block;
+        
+        svg {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-self: flex-end;
+            margin: 0 0 2rem auto;
+            cursor: pointer;
+        }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+
+            #cv {
+                width: auto;
+                height: auto;
+                padding: .5rem 1.5rem;
+                margin: 1rem auto;
+            }
+        }
+
+        .msgError {
+            color: $error-msg; 
+            margin-bottom: 1.5rem;
+        }
+        
+        button { margin: 1rem auto 0 auto; }
+    }
+}

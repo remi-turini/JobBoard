@@ -1,0 +1,18 @@
+button:not(#editProfil) {
+    width: auto;
+    height: 3rem;
+    font-size: $ft-size-btn;
+    padding: $padding-btn;
+    background-color: $blue;
+    color: $white;
+    border: 0;
+    border-radius: $radius-block;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        background-color: transparent;
+        color: $blue;
+        border: $border-block;
+    }
+}

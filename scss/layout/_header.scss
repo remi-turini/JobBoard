@@ -1,0 +1,168 @@
+/* ========== */
+/*   HEADER   */
+/* ========== */
+
+header {
+    background-color: $blue;
+
+    .navigation {
+        @include grid(40px, 1rem 0); // nbre de ligne dans la grille et le padg du header
+        align-items: center;
+
+        .logo {
+            grid-column: 2/4;
+
+            img { width: auto; height: 40px; }
+        }
+
+        .divConnected {
+            width: 100%;
+            grid-column: 10/14;
+
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            column-gap: 0;
+
+            &:hover { 
+                ul { 
+                    justify-content: center;
+                    top: 70px; 
+                } 
+            }
+
+            // balise a
+            .btnConnect {
+                grid-column: 1/5;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    height: 260px;
+                }
+
+                div {
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    padding: .5rem 1rem;
+                    border: 1px solid $white;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                    
+                    svg { 
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-right: 1rem;
+                        color: $white;
+                    }
+
+                    &:hover {
+                        background-color: $light-blue;
+                        border-color: $blue;
+
+                        svg, p {
+                            color: $blue;
+                        }
+                    }
+                }
+
+            }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                padding: .5rem 0 1rem 0;
+                margin: 0 4.25rem;
+                background-color: $blue;
+                position: absolute;
+                top: -250px;
+                //top: 70px;
+                border-radius: 0 0 .5rem .5rem;
+                box-shadow: $box-shadow-block;
+
+                li {
+                    padding: 1rem 2rem;
+                    margin: 0 2rem;
+                    text-align: center;
+                    color: $white;
+
+                    &:not(#lastMenu) { border-bottom: 2px solid $light-blue; }
+                    
+                    &:hover {
+                        padding: 1rem 4rem;
+                        margin: 0;
+                        background-color: $light-blue;
+                        color: $blue;
+                        border: 0;
+                    }
+
+                }
+            }
+        }
+
+        .divNotConnected {
+            grid-column: 12/14;
+            display: flex;
+
+            .btnConnect {
+                grid-column: 1/5;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                &:hover {
+                    height: 260px;
+                }
+
+                div {
+                    width: auto;
+                    display: flex;
+                    justify-content: center;
+                    padding: .5rem 1rem;
+                    border: 1px solid $white;
+                    border-radius: 2rem;
+                    cursor: pointer;
+                    
+                    svg { 
+                        width: 1.5rem;
+                        height: 1.5rem;
+                        margin-right: 1rem;
+                        color: $white;
+                    }
+
+                    &:hover {
+                        background-color: $light-blue;
+                        border-color: $blue;
+
+                        svg, p {
+                            color: $blue;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        p { // Tous les p de header seront en blanc
+            color: $white;
+            font-size: $ft-size-medium;
+        }
+    }
+
+    // HEADER CONNECTION OR INSCRIPTION
+    .headerConnection {
+        @include grid(40px, 1rem 0); 
+        background-color: $blue;
+
+        a {
+            grid-column: 7/9;
+            margin: 0 auto;
+
+            img { width: auto; height: 40px; }
+        }
+    }
+}

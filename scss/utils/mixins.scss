@@ -1,0 +1,22 @@
+/* ========== */
+/*   MIXINS   */
+/* ========== */
+
+// Mixin grid section
+@mixin grid($template-rows, $padding: 6rem 0) {
+    display: grid;
+    padding: $padding;
+    grid-template-columns: 1fr repeat(12, 68px) 1fr;
+    grid-template-rows: $template-rows;
+    grid-auto-rows: 0;
+    column-gap: 32px;
+}
+
+@mixin grid-block($template-rows, $padding: 6rem 0, $column-gap) {
+    display: grid;
+    padding: $padding;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: $template-rows;
+    grid-auto-rows: 0;
+    column-gap: $column-gap;
+}

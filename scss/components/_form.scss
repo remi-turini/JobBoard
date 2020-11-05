@@ -1,0 +1,45 @@
+form {
+
+    div:not(.divConnect) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+
+        label { text-align: center; }
+
+        input, textarea, select  {
+            width: 27rem;
+            height: 3rem;
+            font-size: $ft-size-input;
+            text-align: center;
+            padding: 0 1.5rem;
+            margin: .5rem auto 0 auto;
+            text-align: center;
+            border: $border-block;
+            border-radius: $radius-block;
+            outline: none;
+
+            &::placeholder {
+                font-size: $ft-size-text;
+                text-align: center;
+                color: $light-blue;
+                opacity: 1;
+            }
+        }
+        textarea { 
+            width: 36rem;
+            height: 12rem;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            padding: .5rem 1.5rem;
+        }
+    }
+
+    .msgError {
+        color: $error-msg; 
+        margin-bottom: 1.5rem;
+    }
+    h2 { text-align: center; }
+
+}

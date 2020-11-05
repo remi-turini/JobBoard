@@ -1,0 +1,34 @@
+/* ========== */
+/*   IMPORT   */
+/* ========== */
+
+// UTILS
+@import "./utils/variables.scss";
+@import "./utils/mixins.scss";
+
+// VENDORS EXTERNAL
+
+// BASE
+@import "./base/general.scss";
+
+// COMPONENTS
+@import "./components/button.scss";
+@import "./components/form.scss";
+@import "./components/formApply.scss";
+@import "./components/offerDescription.scss";
+@import "./components/deleteConfirm.scss";
+@import "./components/listInfoAdmin.scss";
+@import "./components/formAdmin.scss";
+@import "./components/aboutCompanies.scss";
+
+// LAYOUT
+@import "./layout/header.scss";
+@import "./layout/main.scss";
+@import "./layout/footer.scss";
+
+// PAGES
+@import "./pages/accueil.scss";
+@import "./pages/connection.scss";
+@import "./pages/findSearch.scss";
+@import "./pages/profil.scss";
+@import "./pages/adminPage.scss";

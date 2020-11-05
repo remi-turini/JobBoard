@@ -1,0 +1,110 @@
+.mainProfil {
+    @include grid(auto auto auto, 3rem 0);
+    align-content: flex-start;
+    color: $blue;
+
+    #headProfil, #details, #profilForm {
+        padding: 2rem 4rem;
+        background-color: $white;
+        border-radius: $radius-block;
+        box-shadow: $box-shadow-block;
+    }
+
+    // SECTION : HEADER PROFIL
+    #headProfil {
+        grid-column: 4/12;
+        grid-row: 1/2;
+        max-height: 136px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        color: $black;
+
+        svg {
+            width: 72px;
+            height: 72px;
+            margin-right: 2rem;
+        }
+
+        h2 { font-size: $ft-size-titleProfil; }
+    }
+
+    // SECTION : INFOS PROFIL
+    #details {
+        grid-column: 4/12;
+        grid-row: 2/3;
+        display: flex;
+        justify-content: space-between;
+        //padding: 3rem 7rem;
+        color: $blue;
+
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: $ft-size-title2;
+        }
+
+        ul {
+            display: flex;
+            align-items: center;
+            
+            &:not(#lastDetails) { margin-bottom: 1.5rem; } // not last ul
+            
+            li {
+                margin-bottom: .5rem;
+
+                h3 { 
+                    font-size: $ft-size-title3;
+                    margin-right: 2rem;
+                }
+            }
+        }
+
+        #editProfil { 
+            width: auto;
+            height: auto;
+            padding: 0;
+            background-color: transparent;
+            color: $blue;
+            margin-bottom: auto;
+            border: 0;
+            border-radius: none;
+
+            svg {
+                width: 32px;
+                height: 32px;
+            }
+        }
+    }
+
+    // SECTION : MODIFY PROFIL
+    #profilForm {
+        grid-column: 4/12;
+        grid-row: 2/3; //grid-row: 3/4;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 { 
+            font-size: $ft-size-title2;
+            margin: 1rem 0 2rem 0;
+        }
+        div { margin-bottom: 1.5rem; }
+
+        .footerFormProfil {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .msgError { 
+                text-align: center; 
+                margin-top: 0;
+            }
+            .updateAccount { margin: 2rem auto 0 auto; }
+            .cancelModify { margin: 1rem auto 0 auto; }
+
+        }
+    
+    }
+    
+}
+

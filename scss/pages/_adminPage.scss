@@ -1,0 +1,204 @@
+.mainAdmin {
+    @include grid(auto auto, 3rem 0);
+
+    /* ============= */
+    /*    GENERAL    */
+    /* ============= */
+
+    h1 {
+        margin-bottom: 1rem;
+        font-size: $ft-size-title1;
+        text-align: center;
+        color: $blue;
+    }
+
+    .smallButton {
+        margin: 2rem 2rem 0 0;
+        background-color: transparent;
+        color: $blue;
+        border: $border-block;
+
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+
+    .addElement { margin: 2rem auto 1rem auto; }
+
+    .btnTable {
+        grid-column: 2/14;
+        display: flex;
+        justify-content: space-evenly;
+        
+        button { box-shadow: $box-shadow-block; }
+    }
+
+    .btnReturn {
+        grid-column: 3/13;
+        grid-row: 1/2;
+        display: flex;
+        margin-bottom: 2rem;
+
+        p { 
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    /* ============== */
+    /* ============== */
+
+
+
+    /* ============== */
+    /* TABLE ANNONCES */
+    /* ============== */
+    .sectionOfferAdmin {
+        grid-column: 3/13;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: $white;
+        border-radius: $radius-block;
+        box-shadow: $box-shadow-block;
+        position: relative;
+        z-index: 0;
+
+        .offerFooter {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 0 1rem 0;
+            
+            button { margin: 0; }
+        }
+
+        .btnJobAdmin {
+            display: flex;
+            justify-content: space-around;
+        }
+    }
+
+    // DELETE CONFIRM SECTION (style in deleteConform components)
+    .wrapperDeleteConfirm {
+        grid-column: 1/15;
+        grid-row: 2/3;
+    }
+
+    // NEW APPLY SECTION
+    .wrapperNewApply {
+        width: 100%;
+        padding: 5rem 0;
+        background-color: $bkg-apply;
+        position: absolute;
+        top: 0;
+
+        .newApply {
+            width: 58rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            margin: auto;
+            border-radius: .5rem;
+            box-shadow: $box-shadow-block;
+            background-color: $white;
+
+            svg {
+                width: 48px;
+                height: 48px;
+                display: flex;
+                justify-self: flex-end;
+                margin: 0 0 2rem auto;
+                cursor: pointer;
+            }
+    
+            form {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                h1 {
+                    color: $blue;
+                    font-size: 36px;
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }
+
+                input, select { 
+                    width: 36rem;
+                    color: $light-blue;
+                }
+    
+                h2 {
+                    font-size: $ft-size-title2;
+                    text-align: center;
+                    color: $blue;
+                    margin: 4rem 0 1rem 0;
+                }
+                button { margin: 3rem auto 1rem auto; }
+            }
+        }
+    }
+
+    /* ============== */
+    /* ============== */
+
+    /* ================== */
+    /* TABLE UTILISATEURS */
+    /* ================== */
+    .sectionUsersAdmin {
+        grid-column: 3/13;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: $white;
+        border-radius: $radius-block;
+        box-shadow: $box-shadow-block;
+        position: relative;
+        z-index: 0;
+        margin-bottom: 1rem;
+
+        // infosList (ul li>ul>li) IN LISTINFOADMIN COMPONENTS
+    }
+
+    /* ============== */
+    /* ============== */
+
+    /* ================ */
+    /* TABLE ENTREPRISE */
+    /* ================ */
+    .sectionCompaniesAdmin {
+        grid-column: 3/13;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: $white;
+        border-radius: $radius-block;
+        box-shadow: $box-shadow-block;
+        margin-bottom: 1rem;
+
+        // infosList (ul li>ul>li) IN LISTINFOADMIN COMPONENTS
+    }
+
+    /* ============== */
+    /* ============== */
+
+    /* ===================== */
+    /* TABLE JOB APPLICATION */
+    /* ===================== */
+    .sectionJobAppAdmin {
+        grid-column: 3/13;
+        grid-row: 2/3;
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        background-color: $white;
+        border-radius: $radius-block;
+        box-shadow: $box-shadow-block;
+        margin-bottom: 1rem;
+    }
+}

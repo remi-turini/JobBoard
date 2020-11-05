@@ -1,0 +1,39 @@
+/* =========== */
+/*   GENERAL   */
+/* =========== */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    background-color: $grey-body;
+    color: $black;
+}
+
+p, h1, h2, h3, h4, ul, li, a {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+
+    padding: 0;
+    padding-inline-start: 0;
+    padding-inline-end: 0;
+    padding-block-start: 0;
+    padding-block-end: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

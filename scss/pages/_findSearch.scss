@@ -1,0 +1,11 @@
+/* ================= */
+/*   FIND RESEARCH   */
+/* ================= */
+
+#findSearch {
+    @include grid(auto, 3rem 0);
+    height: 1100px;
+
+    .sectionOffer { grid-column: 3/13; grid-row: 1/2; }
+    // STYLE JOB DESCRIPTION IN COMPONENTS
+}
